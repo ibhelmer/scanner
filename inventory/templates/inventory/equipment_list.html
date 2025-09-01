@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipment</title>
+</head>
+<body>
+    <h1>Equipment</h1>
+    <ul>
+        {% for device in devices %}
+            <li>{{ device.name }} - {{ device.mac_address }} - {{ device.ip_address }}</li>
+        {% empty %}
+            <li>No equipment available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
